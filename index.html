@@ -66,30 +66,45 @@
     </div>
 
     <!-- Header/Navigation -->
-    <header class="bg-brand-navy/95 backdrop-blur-md sticky top-0 z-40 border-b border-brand-gold/20 shadow-lg py-4 md:py-2">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center justify-center md:justify-start w-full md:w-auto">
-                <img src="logo.png" alt="Gonçalves & Borges Advocacia" class="h-20 sm:h-24 md:h-28 w-auto object-contain">
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 shadow-sm py-3 transition-all-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
+            <!-- Logo Container -->
+            <div class="flex items-center justify-between w-full lg:w-auto">
+                <a href="#inicio" class="flex items-center gap-2">
+                    <img src="logo.png" alt="Gonçalves & Borges Advocacia" class="h-16 sm:h-20 w-auto object-contain">
+                </a>
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-brand-navy hover:text-brand-gold text-2xl focus:outline-none" aria-label="Menu principal">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
             </div>
             
-            <!-- Contact Quick Badge -->
-            <div class="flex items-center gap-4">
-                <div class="text-center md:text-right">
-                    <span class="block text-[11px] text-slate-400 uppercase tracking-widest">Fale com um Especialista</span>
-                    <a href="https://wa.me/5511911686455?text=Ol%C3%A1%2C+gostaria+de+fazer+uma+an%C3%A1lise+de+viabilidade+da+minha+isen%C3%A7%C3%A3o+de+IPTU." class="text-brand-gold hover:text-white font-semibold transition-all-300 flex items-center gap-1 text-base sm:text-lg">
-                        <i class="fa-brands fa-whatsapp text-green-500"></i> (11) 91168-6455
-                    </a>
-                </div>
-                <div class="h-8 w-[1px] bg-brand-gold/30"></div>
-                <div class="text-xs text-brand-gold/80 bg-brand-gold/10 px-3 py-1.5 rounded border border-brand-gold/30 font-medium whitespace-nowrap">
-                    <i class="fa-solid fa-shield-halved mr-1"></i> OAB/SP Compatível
-                </div>
+            <!-- Navigation Links (Middle) -->
+            <nav id="nav-menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-4 xl:gap-6 w-full lg:w-auto mt-4 lg:mt-0">
+                <a href="#inicio" class="text-xs xl:text-sm font-bold text-brand-navy hover:text-brand-gold transition-all-300 py-1 border-b-2 border-brand-gold">Início</a>
+                <a href="#como-funciona" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Como Funciona</a>
+                <a href="#vantagens" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Vantagens</a>
+                <a href="#regras-cidades" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Regras Municipais</a>
+                <a href="#servicos" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Serviços</a>
+                <a href="#faq" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Dúvidas Comuns</a>
+            </nav>
+
+            <!-- Action Buttons (Right) -->
+            <div id="nav-actions" class="hidden lg:flex flex-col lg:flex-row items-center gap-3 w-full lg:w-auto justify-end mt-4 lg:mt-0">
+                <!-- Simular Direito Button -->
+                <button onclick="scrollToQuiz()" class="px-4 py-2 bg-brand-gold hover:bg-brand-goldDark text-brand-navy font-bold rounded-lg text-xs xl:text-sm shadow transition-all-300 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-square-poll-vertical"></i> Simular Direito
+                </button>
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/5511911686455?text=Ol%C3%A1%2C+gostaria+de+fazer+uma+an%C3%A1lise+de+viabilidade+da+minha+isen%C3%A7%C3%A3o+de+IPTU." target="_blank" class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg text-xs xl:text-sm shadow transition-all-300 flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Falar com Especialista
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-brand-navy text-white py-12 lg:py-20 overflow-hidden">
+    <section id="inicio" class="relative bg-brand-navy text-white py-12 lg:py-20 overflow-hidden">
         <!-- Radial luxury background mesh -->
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,rgba(197,168,128,0.8),transparent_40%)]"></div>
         <div class="absolute -bottom-48 -left-48 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl"></div>
@@ -257,7 +272,7 @@
     </section>
 
     <!-- Problema e Solução Section -->
-    <section class="py-16 lg:py-20 bg-brand-mutedSand relative">
+    <section id="como-funciona" class="py-16 lg:py-20 bg-brand-mutedSand relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-brand-goldDark text-xs font-bold uppercase tracking-widest block mb-2">Conscientização Tributária</span>
@@ -323,7 +338,7 @@
     </section>
 
     <!-- Benefits of Professional Legal Guidance -->
-    <section class="py-16 lg:py-24 bg-brand-sand border-t border-b border-brand-gold/10">
+    <section id="vantagens" class="py-16 lg:py-24 bg-brand-sand border-t border-b border-brand-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-brand-goldDark text-xs font-bold uppercase tracking-widest block mb-2">Vantagens Exclusivas</span>
@@ -416,7 +431,7 @@
     </section>
 
     <!-- Tabbed Regional Information & Social Proof Section -->
-    <section class="py-16 lg:py-24 bg-white relative">
+    <section id="regras-cidades" class="py-16 lg:py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-brand-goldDark text-xs font-bold uppercase tracking-widest block mb-2">Casos de Sucesso Locais</span>
@@ -545,7 +560,7 @@
     </section>
 
     <!-- Detailed Services Offer Breakdown (Pricing and Transparency) -->
-    <section class="py-16 lg:py-24 bg-brand-mutedSand relative border-t border-b border-brand-gold/10">
+    <section id="servicos" class="py-16 lg:py-24 bg-brand-mutedSand relative border-t border-b border-brand-gold/10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-brand-goldDark text-xs font-bold uppercase tracking-widest block mb-2">Transparência Ética</span>
@@ -657,7 +672,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-16 lg:py-20 bg-brand-sand relative">
+    <section id="faq" class="py-16 lg:py-20 bg-brand-sand relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-brand-goldDark text-xs font-bold uppercase tracking-widest block mb-2">Esclarecimentos Legais</span>
@@ -969,6 +984,27 @@
             // Show selected content and set active style
             document.getElementById('content-' + city).className = "max-w-2xl mx-auto block";
             document.getElementById('tab-' + city).className = "flex-1 pb-4 text-sm font-semibold border-b-2 border-brand-navy text-brand-navy transition-all-300 flex items-center justify-center gap-2";
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            const navActions = document.getElementById('nav-actions');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            if (navMenu.classList.contains('hidden')) {
+                navMenu.classList.remove('hidden');
+                navMenu.classList.add('flex');
+                navActions.classList.remove('hidden');
+                navActions.classList.add('flex');
+                menuIcon.className = "fa-solid fa-xmark";
+            } else {
+                navMenu.classList.add('hidden');
+                navMenu.classList.remove('flex');
+                navActions.classList.add('hidden');
+                navActions.classList.remove('flex');
+                menuIcon.className = "fa-solid fa-bars";
+            }
         }
     </script>
 </body>
