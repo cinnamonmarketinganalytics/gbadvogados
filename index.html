@@ -70,7 +70,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
             <!-- Logo Container -->
             <div class="flex items-center justify-between w-full lg:w-auto">
-                <a href="#inicio" class="flex items-center gap-2">
+                <a href="javascript:void(0)" onclick="showPage('inicio')" class="flex items-center gap-2">
                     <img src="logo.png" alt="Gonçalves & Borges Advocacia" class="h-16 sm:h-20 w-auto object-contain">
                 </a>
                 <!-- Mobile Menu Button -->
@@ -81,18 +81,18 @@
             
             <!-- Navigation Links (Middle) -->
             <nav id="nav-menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-4 xl:gap-6 w-full lg:w-auto mt-4 lg:mt-0">
-                <a href="#inicio" class="text-xs xl:text-sm font-bold text-brand-navy hover:text-brand-gold transition-all-300 py-1 border-b-2 border-brand-gold">Início</a>
-                <a href="#como-funciona" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Como Funciona</a>
-                <a href="#vantagens" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Vantagens</a>
-                <a href="#regras-cidades" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Regras Municipais</a>
-                <a href="#servicos" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Serviços</a>
-                <a href="#faq" class="text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy hover:border-b-2 hover:border-brand-gold/30 transition-all-300 py-1">Dúvidas Comuns</a>
+                <a href="javascript:void(0)" onclick="showPage('inicio')" id="nav-link-inicio" class="nav-link text-xs xl:text-sm font-bold text-brand-navy hover:text-brand-gold transition-all-300 py-1 border-b-2 border-brand-gold">Início</a>
+                <a href="javascript:void(0)" onclick="showPage('como-funciona')" id="nav-link-como-funciona" class="nav-link text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy transition-all-300 py-1 border-b-2 border-transparent">Como Funciona</a>
+                <a href="javascript:void(0)" onclick="showPage('vantagens')" id="nav-link-vantagens" class="nav-link text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy transition-all-300 py-1 border-b-2 border-transparent">Vantagens</a>
+                <a href="javascript:void(0)" onclick="showPage('regras-cidades')" id="nav-link-regras-cidades" class="nav-link text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy transition-all-300 py-1 border-b-2 border-transparent">Regras Municipais</a>
+                <a href="javascript:void(0)" onclick="showPage('servicos')" id="nav-link-servicos" class="nav-link text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy transition-all-300 py-1 border-b-2 border-transparent">Serviços</a>
+                <a href="javascript:void(0)" onclick="showPage('faq')" id="nav-link-faq" class="nav-link text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy transition-all-300 py-1 border-b-2 border-transparent">Dúvidas Comuns</a>
             </nav>
 
             <!-- Action Buttons (Right) -->
             <div id="nav-actions" class="hidden lg:flex flex-col lg:flex-row items-center gap-3 w-full lg:w-auto justify-end mt-4 lg:mt-0">
                 <!-- Simular Direito Button -->
-                <button onclick="scrollToQuiz()" class="px-4 py-2 bg-brand-gold hover:bg-brand-goldDark text-brand-navy font-bold rounded-lg text-xs xl:text-sm shadow transition-all-300 flex items-center gap-1.5 whitespace-nowrap">
+                <button onclick="showPage('inicio')" class="px-4 py-2 bg-brand-gold hover:bg-brand-goldDark text-brand-navy font-bold rounded-lg text-xs xl:text-sm shadow transition-all-300 flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-square-poll-vertical"></i> Simular Direito
                 </button>
                 <!-- WhatsApp Button -->
@@ -103,6 +103,8 @@
         </div>
     </header>
 
+    <!-- PAGE: Início -->
+    <div class="page-section" data-page="inicio">
     <!-- Hero Section -->
     <section id="inicio" class="relative bg-brand-navy text-white py-12 lg:py-20 overflow-hidden">
         <!-- Radial luxury background mesh -->
@@ -270,7 +272,10 @@
             </div>
         </div>
     </section>
+    </div><!-- /PAGE: Início -->
 
+    <!-- PAGE: Como Funciona -->
+    <div class="page-section hidden" data-page="como-funciona">
     <!-- Problema e Solução Section -->
     <section id="como-funciona" class="py-16 lg:py-20 bg-brand-mutedSand relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,7 +341,10 @@
             </div>
         </div>
     </section>
+    </div><!-- /PAGE: Como Funciona -->
 
+    <!-- PAGE: Vantagens -->
+    <div class="page-section hidden" data-page="vantagens">
     <!-- Benefits of Professional Legal Guidance -->
     <section id="vantagens" class="py-16 lg:py-24 bg-brand-sand border-t border-b border-brand-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -429,7 +437,10 @@
             </div>
         </div>
     </section>
+    </div><!-- /PAGE: Vantagens -->
 
+    <!-- PAGE: Regras Municipais -->
+    <div class="page-section hidden" data-page="regras-cidades">
     <!-- Tabbed Regional Information & Social Proof Section -->
     <section id="regras-cidades" class="py-16 lg:py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -558,7 +569,10 @@
             </div>
         </div>
     </section>
+    </div><!-- /PAGE: Regras Municipais -->
 
+    <!-- PAGE: Serviços -->
+    <div class="page-section hidden" data-page="servicos">
     <!-- Detailed Services Offer Breakdown (Pricing and Transparency) -->
     <section id="servicos" class="py-16 lg:py-24 bg-brand-mutedSand relative border-t border-b border-brand-gold/10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -670,7 +684,10 @@
             </div>
         </div>
     </section>
+    </div><!-- /PAGE: Serviços -->
 
+    <!-- PAGE: FAQ -->
+    <div class="page-section hidden" data-page="faq">
     <!-- FAQ Section -->
     <section id="faq" class="py-16 lg:py-20 bg-brand-sand relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -851,8 +868,9 @@
             </div>
         </div>
     </section>
+    </div><!-- /PAGE: FAQ -->
 
-    <!-- Footer Section -->
+    <!-- Footer Section (always visible) -->
     <footer class="bg-brand-navy text-slate-400 py-12 border-t border-brand-gold/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -898,9 +916,46 @@
 
     <!-- Scripts for UI Interactions -->
     <script>
-        // Scroll to Simulator Section
+        // ===== SPA Page Navigation =====
+        const pageNames = ['inicio', 'como-funciona', 'vantagens', 'regras-cidades', 'servicos', 'faq'];
+
+        function showPage(pageId) {
+            // Hide all page sections
+            document.querySelectorAll('.page-section').forEach(function(el) {
+                el.classList.add('hidden');
+            });
+
+            // Show the target page
+            const target = document.querySelector('.page-section[data-page="' + pageId + '"]');
+            if (target) {
+                target.classList.remove('hidden');
+            }
+
+            // Update nav link active styles
+            pageNames.forEach(function(name) {
+                const link = document.getElementById('nav-link-' + name);
+                if (link) {
+                    if (name === pageId) {
+                        link.className = 'nav-link text-xs xl:text-sm font-bold text-brand-navy hover:text-brand-gold transition-all-300 py-1 border-b-2 border-brand-gold';
+                    } else {
+                        link.className = 'nav-link text-xs xl:text-sm font-semibold text-slate-600 hover:text-brand-navy transition-all-300 py-1 border-b-2 border-transparent';
+                    }
+                }
+            });
+
+            // Scroll to top of page
+            window.scrollTo({ top: 0, behavior: 'instant' });
+
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+
+        // Scroll to Simulator Section (navigates to Início first)
         function scrollToQuiz() {
-            document.getElementById('quiz-container').scrollIntoView({ behavior: 'smooth' });
+            showPage('inicio');
+            setTimeout(function() {
+                document.getElementById('quiz-container').scrollIntoView({ behavior: 'smooth' });
+            }, 100);
         }
 
         // Multi-step Quiz Engine
@@ -914,7 +969,6 @@
             const nextStepEl = document.getElementById('step-' + nextStep);
             if (nextStepEl) {
                 nextStepEl.className = "space-y-4 block";
-                // Adjust progress bar
                 const progressWidth = 25 * nextStep;
                 document.getElementById('quiz-progress').style.width = progressWidth + '%';
             }
@@ -935,11 +989,9 @@
             quizAnswers['step-4'] = city;
             document.getElementById('step-4').className = "space-y-4 hidden";
             
-            // Display Results
             document.getElementById('step-result-eligible').className = "space-y-4 text-center py-4 block";
             document.getElementById('quiz-progress').style.width = '100%';
             
-            // Build custom WhatsApp Link based on selections
             const baseText = "Olá, acabei de realizar o simulador de viabilidade de isenção de IPTU na sua página. Seguem minhas respostas:\n\n";
             const answersText = `- Situação: ${quizAnswers['step-1']}\n- Único Imóvel: ${quizAnswers['step-2']}\n- Renda Individual: ${quizAnswers['step-3']}\n- Cidade: ${quizAnswers['step-4']}\n\nGostaria de agendar a análise de viabilidade dos meus documentos.`;
             const encodedText = encodeURIComponent(baseText + answersText);
@@ -968,20 +1020,17 @@
             }
         }
 
-        // Toggle Regional Tabs (São Paulo, Embu das Artes, Itapecerica da Serra)
+        // Toggle Regional Tabs
         function toggleCityTab(city) {
-            // Hide all tab contents
             document.getElementById('content-sp').className = "max-w-2xl mx-auto hidden";
             document.getElementById('content-embu').className = "max-w-2xl mx-auto hidden";
             document.getElementById('content-itapecerica').className = "max-w-2xl mx-auto hidden";
             
-            // Set all tabs to inactive styling
             const inactiveClass = "flex-1 pb-4 text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-600 transition-all-300 flex items-center justify-center gap-2";
             document.getElementById('tab-sp').className = inactiveClass;
             document.getElementById('tab-embu').className = inactiveClass;
             document.getElementById('tab-itapecerica').className = inactiveClass;
             
-            // Show selected content and set active style
             document.getElementById('content-' + city).className = "max-w-2xl mx-auto block";
             document.getElementById('tab-' + city).className = "flex-1 pb-4 text-sm font-semibold border-b-2 border-brand-navy text-brand-navy transition-all-300 flex items-center justify-center gap-2";
         }
@@ -999,6 +1048,16 @@
                 navActions.classList.add('flex');
                 menuIcon.className = "fa-solid fa-xmark";
             } else {
+                closeMobileMenu();
+            }
+        }
+
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            const navActions = document.getElementById('nav-actions');
+            const menuIcon = document.getElementById('menu-icon');
+            // Only close if currently in mobile view
+            if (window.innerWidth < 1024) {
                 navMenu.classList.add('hidden');
                 navMenu.classList.remove('flex');
                 navActions.classList.add('hidden');
